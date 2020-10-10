@@ -31,7 +31,4 @@ public class MonsterZukan {
 		tempMonster.add("キタバー");	tempMonsterRare.add(23.0);
 
 	}
-
-    // public 
-    // ここにgetterとsetterの代わりを追いとけばいいべ
 }

@@ -6,22 +6,13 @@ public class Main {
 	static MonsterZukan zukan = new MonsterZukan();
 
 	public static void main(String[] args) {
-
-		// zukan.MonsterZukan();
-		// 初期化する必要あり
-		// pz.setMonsterZukan(tempMonster);
-		// pz.setMonsterRare(tempMonsterRare);
-
 		//1000ミリ秒（1秒）ずつ止まりながらpz.move()を呼び出し続ける
 		//手持ちのボールが無くなったら終了
 		while(true){
 			try {
 				Thread.sleep(100);
 				if(pz.BallCount()>0){
-					/// このあたりは確実に変更
 					pz.Main();
-					// System.out.println("手持ちのボールは"+pz.getBalls()+"個，フルーツは"+pz.getFruits()+"個");
-					// System.out.println(pz.getDistance()+"km歩いた．");
 					pz.MoveMsg();
 				}else{
 					break;

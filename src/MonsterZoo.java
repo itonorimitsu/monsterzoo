@@ -41,31 +41,4 @@ public class MonsterZoo {
 		return move.BallCount();
 	}
 
-
-// この辺りにgetterとsetterを使っているので変換
-	// public double getDistance() {
-	// 	return distance;
-	// }
-
-	// public int getBalls() {
-	// 	return balls;
-	// }
-
-	// public int getFruits() {
-	// 	return fruits;
-	// }
-
-	// public ArrayList<String> getUserMonster() {
-	// 	return userMonster;
-	// }
-
-	// // monsterZukanから初期値をもらっている？
-	// public void setMonsterZukan(ArrayList<String> monsterZukan) {
-	// 	this.monsterZukan = monsterZukan;
-	// }
-
-
-	// public void setMonsterRare(ArrayList<Double> monsterRare) {
-	// 	this.monsterRare = monsterRare;
-	// }
 }

@@ -54,7 +54,6 @@ public class Move {
         // このflagがbreakの代わりのつもり(絶対よくないけど)
         this.flag = false;
         IntStream.range(0, 3).filter(i -> BFD.Ball>0).filter(i -> this.flag == false).forEach(i -> {
-            // System.out.println(i);
             this.r = RandomNum();
             FruitsUse();
             BallThrows();
@@ -83,13 +82,10 @@ public class Move {
     // true/falseを返すようにする、判定メソッド
     private Boolean MonsterCapture() {
         if (mz.tempMonsterRare.get(this.MonsterID) <= this.r) {
-            // break;
             GetMonster();
-            // System.out.println("捕まえた" + r);
             return true;
         } else {
             EscapeMsg();
-            // System.out.println("逃した" + r);
             return false;
         }
     }
@@ -97,9 +93,6 @@ public class Move {
 // ここもっと綺麗にできる。
     private void GetMonster() {
         CaptureMsg();
-        // IntStream.range(0, this.userMonster.size()).filter(j -> this.userMonster.get(j) == null).findFirst().ifPresent(j -> {
-        //     this.userMonster.add(mz.tempMonster.get(this.MonsterID));
-        // });
         this.userMonster.add(mz.tempMonster.get(this.MonsterID));
     }
 
@@ -119,9 +112,6 @@ public class Move {
             RegiMons();
             EggHatchOut(i);
         });
-        // e.egg.stream().filter(i -> i == true).filter(i -> e.eggDistance.get(e.egg.index(i))>=3).forEach(i -> {
-        //     System.out.println(i);
-        // });
     }
 
 // 卵のメッセージ
@@ -133,9 +123,6 @@ public class Move {
 
     // 卵から孵ったモンスターを登録する
     private void RegiMons() {
-        // IntStream.range(0, this.userMonster.size()).filter(j -> this.userMonster.get(j) == null).findFirst().ifPresent(j -> {
-        //     this.userMonster.set(j, mz.tempMonster.get(this.MonsterID));
-        // });
         this.userMonster.add(mz.tempMonster.get(this.MonsterID));
     }
 
@@ -144,10 +131,6 @@ public class Move {
         e.egg.set(i, false);
         e.eggDistance.set(i, 0.0);
     }
-
-
-
-
 
 // flag<=1の時の処理
     public void ZooStationStart() {
@@ -210,10 +193,7 @@ public class Move {
     }
 
     public void BallLostMsg() {
-        // System.out.println("nagasa " + this.userMonster.size());
-
 		IntStream.range(0, this.userMonster.size()).filter(i -> this.userMonster.get(i)!=null).forEach(i -> {
-            // System.out.println(i);
 			System.out.println(this.userMonster.get(i)+"を捕まえた．");
 		});
     }
@@ -221,5 +201,4 @@ public class Move {
     public int BallCount() {
         return BFD.Ball;
     }
-
 }
