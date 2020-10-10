@@ -19,7 +19,7 @@ public class Main {
 				Thread.sleep(1000);
 				if(pz.BallCount()>0){
 					/// このあたりは確実に変更
-					pz.move();
+					pz.Main();
 					// System.out.println("手持ちのボールは"+pz.getBalls()+"個，フルーツは"+pz.getFruits()+"個");
 					// System.out.println(pz.getDistance()+"km歩いた．");
 					pz.MoveMsg();

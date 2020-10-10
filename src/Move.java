@@ -178,8 +178,6 @@ public class Move {
 		e.eggDistance.add(0.0);
     }
 
-
-
     public void MoveMsg() {
         System.out.println("手持ちのボールは"+BFD.Ball+"個，フルーツは"+BFD.Fruits+"個");
         System.out.println(BFD.Distance+"km歩いた．");

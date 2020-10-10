@@ -6,7 +6,7 @@ public class MonsterZukan {
     ArrayList<Double> tempMonsterRare = new ArrayList<Double>();
 
 	//テスト用のモンスターデータを登録するメソッド
-    protected void MonsterZukan() {
+    public MonsterZukan() {
 		tempMonster.set(0, "イガキン");	tempMonsterRare.set(0, 9.0);
 		tempMonster.set(1, "ナマチュウ");	tempMonsterRare.set(1, 3.0);
 		tempMonster.set(2, "イノウエン");	tempMonsterRare.set(2, 1.0);

@@ -4,9 +4,9 @@ import java.util.stream.*;
 
 
 public class MonsterZoo {
-	double distance=0.0;//歩いた距離
-	int balls=10;//モンスターを捕まえられるボールの数
-	int fruits=0;//ぶつけるとモンスターが捕まえやすくなるフルーツ
+	// double distance=0.0;//歩いた距離
+	// int balls=10;//モンスターを捕まえられるボールの数
+	// int fruits=0;//ぶつけるとモンスターが捕まえやすくなるフルーツ
 
 	//卵は最大9個まで持てる．卵を取得するとeggにtrueが代入され，
 	//移動するたびに,eggDistanceに1.0kmずつ加算される．
@@ -37,7 +37,7 @@ public class MonsterZoo {
 	public int flg1;
 
 	//呼び出すと1km distanceが増える
-	void move(){
+	void Main(){
 		// this.distance++;
 		move.MoveMain();
 		this.MakeFlag();
