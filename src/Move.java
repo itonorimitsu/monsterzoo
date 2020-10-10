@@ -175,16 +175,16 @@ public class Move {
     }
 
     private void EggResult() {
-        if (BFD.Egg>=1) {
-            IntStream.range(0, stationBFD.Egg).filter(i -> e.egg.size()<10).findFirst().ifPresent(i -> {
-                GetEggSetup();
+        if (stationBFD.Egg>=1) {
+            IntStream.range(0, stationBFD.Egg).filter(i -> e.egg.size()<10).filter(i -> e.egg.get(i) == false).findFirst().ifPresent(i -> {
+                GetEggSetup(i);
             });
         }
     }
 
-    private void GetEggSetup() {
-		e.egg.add(true);
-		e.eggDistance.add(0.0);
+    private void GetEggSetup(int i) {
+		e.egg.set(i, true);
+		e.eggDistance.set(i, 0.0);
     }
 
     public void MoveMsg() {
