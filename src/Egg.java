@@ -4,7 +4,6 @@ import java.util.ArrayList;
 //移動するたびに,eggDistanceに1.0kmずつ加算される．
 //3km移動するとランダムでモンスターが孵る
 
-//Listのサイズに注意するように
 public class Egg {
     ArrayList<Double> eggDistance = new ArrayList<Double>();
     ArrayList<Boolean> egg = new ArrayList<Boolean>();

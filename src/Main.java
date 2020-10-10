@@ -16,7 +16,7 @@ public class Main {
 		//手持ちのボールが無くなったら終了
 		while(true){
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(100);
 				if(pz.BallCount()>0){
 					/// このあたりは確実に変更
 					pz.Main();

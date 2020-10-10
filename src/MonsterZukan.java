@@ -7,28 +7,28 @@ public class MonsterZukan {
 
 	//テスト用のモンスターデータを登録するメソッド
     public MonsterZukan() {
-		tempMonster.set(0, "イガキン");	tempMonsterRare.set(0, 9.0);
-		tempMonster.set(1, "ナマチュウ");	tempMonsterRare.set(1, 3.0);
-		tempMonster.set(2, "イノウエン");	tempMonsterRare.set(2, 1.0);
-		tempMonster.set(3, "リョージィ");	tempMonsterRare.set(3, 2.0);
-		tempMonster.set(4, "アキモトン");	tempMonsterRare.set(4, 5.0);
-		tempMonster.set(5, "ゴージマ");	tempMonsterRare.set(5, 4.0);
-		tempMonster.set(6, "チュウデン");	tempMonsterRare.set(6, 6.0);
-		tempMonster.set(7, "ヅカホン");	tempMonsterRare.set(7, 8.0);
-		tempMonster.set(8, "ニシムラー");	tempMonsterRare.set(8, 7.0);
-		tempMonster.set(9, "サコーデン");	tempMonsterRare.set(9, 2.0);
-		tempMonster.set(10, "ウッチー");	tempMonsterRare.set(10, 5.0);
-		tempMonster.set(11, "ハヤッシー");	tempMonsterRare.set(11, 4.0);
-		tempMonster.set(12, "キーチー");	tempMonsterRare.set(12, 3.0);
-		tempMonster.set(13, "リョクン");	tempMonsterRare.set(13, 1.0);
-		tempMonster.set(14, "デコポン");	tempMonsterRare.set(14, 6.0);
-		tempMonster.set(15, "カミサン");	tempMonsterRare.set(15, 5.0);
-		tempMonster.set(16, "シスイ");	tempMonsterRare.set(16, 1.0);
-		tempMonster.set(17, "ジョナ");	tempMonsterRare.set(17, 7.0);
-		tempMonster.set(18, "ギダギダ");	tempMonsterRare.set(18, 2.0);
-		tempMonster.set(19, "ミッツー");	tempMonsterRare.set(19, 8.0);
-		tempMonster.set(20, "ゾエサン");	tempMonsterRare.set(20, 5.0);
-		tempMonster.set(21, "キタバー");	tempMonsterRare.set(21, 3.0);
+		tempMonster.add("イガキン");    tempMonsterRare.add(9.0);
+		tempMonster.add("ナマチュウ");	tempMonsterRare.add(3.0);
+		tempMonster.add("イノウエン");	tempMonsterRare.add(1.0);
+		tempMonster.add("リョージィ");	tempMonsterRare.add(2.0);
+		tempMonster.add("アキモトン");	tempMonsterRare.add(5.0);
+		tempMonster.add("ゴージマ");	tempMonsterRare.add(4.0);
+		tempMonster.add("チュウデン");	tempMonsterRare.add(6.0);
+		tempMonster.add("ヅカホン");	tempMonsterRare.add(8.0);
+		tempMonster.add("ニシムラー");	tempMonsterRare.add(7.0);
+		tempMonster.add("サコーデン");	tempMonsterRare.add(2.0);
+		tempMonster.add("ウッチー");	tempMonsterRare.add(5.0);
+		tempMonster.add("ハヤッシー");	tempMonsterRare.add(14.0);
+		tempMonster.add("キーチー");	tempMonsterRare.add(13.0);
+		tempMonster.add("リョクン");	tempMonsterRare.add(11.0);
+		tempMonster.add("デコポン");	tempMonsterRare.add(16.0);
+		tempMonster.add("カミサン");	tempMonsterRare.add(15.0);
+		tempMonster.add("シスイ");  	tempMonsterRare.add(11.0);
+		tempMonster.add("ジョナ");	    tempMonsterRare.add(17.0);
+		tempMonster.add("ギダギダ");	tempMonsterRare.add(12.0);
+		tempMonster.add("ミッツー");	tempMonsterRare.add(18.0);
+		tempMonster.add("ゾエサン");	tempMonsterRare.add(5.0);
+		tempMonster.add("キタバー");	tempMonsterRare.add(23.0);
 
 	}
 
