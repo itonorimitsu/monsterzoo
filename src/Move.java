@@ -179,6 +179,23 @@ public class Move {
     }
 
 
+
+    public void MoveMsg() {
+        System.out.println("手持ちのボールは"+BFD.Ball+"個，フルーツは"+BFD.Fruits+"個");
+        System.out.println(BFD.Distance+"km歩いた．");
+    }
+
+    public void BallLostMsg() {
+        System.out.println("ボールがなくなった！");
+		IntStream.range(0, this.userMonster.size()).filter(i -> this.userMonster.get(i)!=null).findFirst().ifPresent(i -> {
+			System.out.println(this.userMonster.get(i)+"を捕まえた．");
+		});
+    }
+
+    public int BallCount() {
+        return BFD.Ball;
+    }
+
 }
 
 

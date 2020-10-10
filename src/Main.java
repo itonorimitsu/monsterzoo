@@ -7,7 +7,7 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		zukan.setMonsterZukan();
+		// zukan.MonsterZukan();
 		// 初期化する必要あり
 		// pz.setMonsterZukan(tempMonster);
 		// pz.setMonsterRare(tempMonsterRare);
@@ -17,11 +17,12 @@ public class Main {
 		while(true){
 			try {
 				Thread.sleep(1000);
-				if(pz.getBalls()>0){
+				if(pz.BallCount()>0){
 					/// このあたりは確実に変更
 					pz.move();
-					System.out.println("手持ちのボールは"+pz.getBalls()+"個，フルーツは"+pz.getFruits()+"個");
-					System.out.println(pz.getDistance()+"km歩いた．");
+					// System.out.println("手持ちのボールは"+pz.getBalls()+"個，フルーツは"+pz.getFruits()+"個");
+					// System.out.println(pz.getDistance()+"km歩いた．");
+					pz.MoveMsg();
 				}else{
 					break;
 				}
@@ -29,10 +30,6 @@ public class Main {
 				e.printStackTrace();
 			}
 		}
-
-		System.out.println("ボールがなくなった！");
-		IntStream.range(0, pz.getUserMonster().size()).filter(i -> pz.getUserMonster().get(i)!=null).findFirst().ifPresent(i -> {
-			System.out.println(pz.getUserMonster().get(i)+"を捕まえた．");
-		});
+		pz.BallLostMsg();
 	}
 }

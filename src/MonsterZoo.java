@@ -30,95 +30,119 @@ public class MonsterZoo {
 	//double monsterRare[] = new double[22];
 	// ArrayList<Double> monsterRare = new ArrayList<Double>();
 
-	static ZooStation Zs = new ZooStation();
-	static BallFruitsEgg StationBFE = new BallFruitsEgg();
-	static Monster mons = new Monster();
+	// static ZooStation Zs = new ZooStation();
+	// static BallFruitsEgg StationBFE = new BallFruitsEgg();
+	static Move move = new Move();
+	
+	public int flg1;
 
 	//呼び出すと1km distanceが増える
 	void move(){
 		// this.distance++;
-		mons.MoveMain();
+		move.MoveMain();
+		this.MakeFlag();
+		this.BranchFlag();
 
-		//メソッド化
-		int flg1 = (int)(Math.random()*10);//0,1の場合はズーstation，7~9の場合はモンスター
+		// if(flg1<=1){
+		// 	// zs.BallFruits bf = new zs.BallFruits();
+		// 	// this.StationBFE = Zs.Main();
 
-		/// ここは長いのでメソッド毎に分割するべき
-		if(flg1<=1){
-			// zs.BallFruits bf = new zs.BallFruits();
-			// this.StationBFE = Zs.Main();
+		// 	mons.ZooStationStart();
 
-			mons.ZooStationStart();
+		// }else if(flg1>=7){
+		// 	mons.CaptureMain();
+		// 	//  ここもメソッド毎に分割する
+		// 	// int m = (int)(this.monsterZukan.size()*Math.random());//monsterZukanからランダムにモンスターを出す
+		// 	// System.out.println(this.monsterZukan.get(m)+"が現れた！");
+		// 	// // for(int i=0;i<3&&this.balls>0;i++){//捕まえる or 3回ボールを投げるまで繰り返す
+		// 	// IntStream.range(0, 3).filter(i -> this.balls>0).forEach(i -> {
+		// 	// 	int r = (int)(6*Math.random());//0~5までの数字をランダムに返す
+		// 	// 		if(this.fruits>0){
+		// 	// 			System.out.println("フルーツを投げた！捕まえやすさが倍になる！");
+		// 	// 			this.fruits--;
+		// 	// 			r = r * 2;
+		// 	// 		}
+		// 	// 	System.out.println(this.monsterZukan.get(m) + "にボールを投げた");
+		// 	// 	this.balls--;
+		// 	// 	// if(this.monsterRare[m]<=r){//monsterRare[m]の値がr以下の場合
+		// 	// 	if (this.monsterRare.get(m)<=r){
+		// 	// 		System.out.println(this.monsterZukan.get(m)+"を捕まえた！");
+		// 	// 		IntStream.range(0, userMonster.size()).filter(j -> this.userMonster.get(m) == null).findFirst().ifPresent(j -> {
+		// 	// 			this.userMonster.set(m, this.monsterZukan.get(m));
+		// 	// 		});
+		// 	// 		break;//ボール投げ終了
+		// 	// 	}else{
+		// 	// 		System.out.println(this.monsterZukan.get(m)+"に逃げられた！");
+		// 	// 	}
+		// 	// });
+		// }
+		// // IntStream.range(0, this.egg.size()).forEach(i -> {
+		// // 	if(this.egg.get(i)==true&&this.eggDistance.get(i)>=3){
+		// // 		System.out.println("卵が孵った！");
+		// // 		int m = (int)(this.monsterZukan.size()*Math.random());
+		// // 		System.out.println(this.monsterZukan.get(i)+"が産まれた！");
 
-		}else if(flg1>=7){
-			mons.CaptureMain();
-			//  ここもメソッド毎に分割する
-			// int m = (int)(this.monsterZukan.size()*Math.random());//monsterZukanからランダムにモンスターを出す
-			// System.out.println(this.monsterZukan.get(m)+"が現れた！");
-			// // for(int i=0;i<3&&this.balls>0;i++){//捕まえる or 3回ボールを投げるまで繰り返す
-			// IntStream.range(0, 3).filter(i -> this.balls>0).forEach(i -> {
-			// 	int r = (int)(6*Math.random());//0~5までの数字をランダムに返す
-			// 		if(this.fruits>0){
-			// 			System.out.println("フルーツを投げた！捕まえやすさが倍になる！");
-			// 			this.fruits--;
-			// 			r = r * 2;
-			// 		}
-			// 	System.out.println(this.monsterZukan.get(m) + "にボールを投げた");
-			// 	this.balls--;
-			// 	// if(this.monsterRare[m]<=r){//monsterRare[m]の値がr以下の場合
-			// 	if (this.monsterRare.get(m)<=r){
-			// 		System.out.println(this.monsterZukan.get(m)+"を捕まえた！");
-			// 		IntStream.range(0, userMonster.size()).filter(j -> this.userMonster.get(m) == null).findFirst().ifPresent(j -> {
-			// 			this.userMonster.set(m, this.monsterZukan.get(m));
-			// 		});
-			// 		break;//ボール投げ終了
-			// 	}else{
-			// 		System.out.println(this.monsterZukan.get(m)+"に逃げられた！");
-			// 	}
-			// });
+		// // 		IntStream.range(0, userMonster.size()).filter(j -> this.userMonster.get(j) == null).findFirst().ifPresent(j -> {
+		// // 			this.userMonster.set(j, this.monsterZukan.get(m));
+		// // 		});
+
+		// // 		this.egg.set(i, false);
+		// // 		this.eggDistance.set(i, 0.0);
+		// // 	}		
+		// // });
+	}
+
+	private void MakeFlag() {
+		//0,1の場合はズーstation，7~9の場合はモンスター
+		this.flg1 = (int)(Math.random()*10);
+	}
+
+	private void BranchFlag() {
+		if (this.flg1 <= 1) {
+			move.ZooStationStart();
+		} else if (this.flg1 >= 7) {
+			move.CaptureMain();
 		}
-		// IntStream.range(0, this.egg.size()).forEach(i -> {
-		// 	if(this.egg.get(i)==true&&this.eggDistance.get(i)>=3){
-		// 		System.out.println("卵が孵った！");
-		// 		int m = (int)(this.monsterZukan.size()*Math.random());
-		// 		System.out.println(this.monsterZukan.get(i)+"が産まれた！");
+		move.EggStream();
+	}
 
-		// 		IntStream.range(0, userMonster.size()).filter(j -> this.userMonster.get(j) == null).findFirst().ifPresent(j -> {
-		// 			this.userMonster.set(j, this.monsterZukan.get(m));
-		// 		});
+	public void MoveMsg() {
+		move.MoveMsg();
+	}
 
-		// 		this.egg.set(i, false);
-		// 		this.eggDistance.set(i, 0.0);
-		// 	}		
-		// });
+	public void BallLostMsg() {
+		move.BallLostMsg();
+	}
+
+	public int BallCount() {
+		return move.BallCount();
 	}
 
 
 // この辺りにgetterとsetterを使っているので変換
-	public double getDistance() {
-		return distance;
-	}
+	// public double getDistance() {
+	// 	return distance;
+	// }
 
-	public int getBalls() {
-		return balls;
-	}
+	// public int getBalls() {
+	// 	return balls;
+	// }
 
-	public int getFruits() {
-		return fruits;
-	}
+	// public int getFruits() {
+	// 	return fruits;
+	// }
 
-	public ArrayList<String> getUserMonster() {
-		return userMonster;
-	}
+	// public ArrayList<String> getUserMonster() {
+	// 	return userMonster;
+	// }
 
-	// monsterZukanから初期値をもらっている？
-	public void setMonsterZukan(ArrayList<String> monsterZukan) {
-		this.monsterZukan = monsterZukan;
-	}
+	// // monsterZukanから初期値をもらっている？
+	// public void setMonsterZukan(ArrayList<String> monsterZukan) {
+	// 	this.monsterZukan = monsterZukan;
+	// }
 
 
-	public void setMonsterRare(ArrayList<Double> monsterRare) {
-		this.monsterRare = monsterRare;
-	}
-
-	public 
+	// public void setMonsterRare(ArrayList<Double> monsterRare) {
+	// 	this.monsterRare = monsterRare;
+	// }
 }
